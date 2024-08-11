@@ -7,6 +7,8 @@ import { useActiveSectionContext } from "@/common/stores/active-section";
 import { smoothScrollTo } from "@/common/lib/utils";
 import { useSectionInView } from "@/common/lib/hooks";
 
+import "@/styles/fonts.css";
+
 const Hero = () => {
   const { ref } = useSectionInView("home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -31,19 +33,24 @@ const Hero = () => {
       </video>
       <div className="container flex flex-col items-start justify-center tracking-wide text-black dark:text-white">
         <div className="container relative flex w-full h-screen flex-col items-center">
-          <div className="h-72 w-[280px] text-center text-[2rem] font-extrabold sm:w-[520px] md:w-[700px] lg:mb-5 lg:w-[920px] lg:text-[3rem] mt-56">
-            <motion.span 
+          <div className="text-center text-[2rem] font-extrabold sm:w-[520px] md:w-[700px] lg:mb-5 lg:w-[920px] lg:text-[3rem] mt-32">
+            <motion.span
               initial={{ y: -100, x: "-50%", opacity: 0 }}
               animate={{ y: 0, x: "-50%", opacity: 1 }}
-              className="mt-20 mb-10 text-start font-extrabold"
+              className="mt-20 mb-10 text-start montserrat"
             >
-              Hey!
+              Hi!
             </motion.span>
             <br />
             <TextAnimation delay={1} baseText={`I'm Ashna`} />
+            <p className="montserrat text-4xl mt-10 mb-10">UX Designer | Artist | Baker</p>
+            <p className="montserrat text-3xl">
+              Unleashing creativity, crafting delightful experiences, and
+              leaving lasting impressions. Join me on this exciting journey!
+            </p>
           </div>
           <motion.div
-            className="w-92 flex flex-col items-center justify-center gap-3 px-4 text-sm font-medium md:mt-12 md:flex-row lg:text-lg"
+            className="w-92 flex flex-col items-center justify-center gap-3 px-4 mt-20 text-sm font-medium md:mt-12 md:flex-row lg:text-lg"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -60,7 +67,7 @@ const Hero = () => {
             >
               <span>Contact me here</span>
             </a>
-            
+
             <a
               className="borderBlack group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:w-auto"
               href="/CV_Azimov_Maksym.pdf"
