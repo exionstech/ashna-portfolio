@@ -1,5 +1,4 @@
 import { useSectionInView } from "@/common/lib/hooks";
-import { smoothScrollTo } from "@/common/lib/utils";
 import { motion } from "framer-motion";
 
 import "@/styles/fonts.css";

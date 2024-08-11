@@ -1,5 +1,3 @@
-import React from "react";
-
 import "@/styles/fonts.css";
 
 import { useSectionInView } from "@/common/lib/hooks";
@@ -8,7 +6,7 @@ import SubmitBtn from "./submit-btn";
 
 const Contacts = () => {
   const { ref } = useSectionInView("contact");
-
+  
   return (
     <motion.section
       id="contact"
@@ -32,7 +30,7 @@ const Contacts = () => {
         <div className="w-[min(100%,38rem)] px-4 montserrat">
           <p className="mb-20 mt-6 text-gray-700 dark:text-white/80">
             Please contact me directly at{" "}
-            <a className="underline" href="mailto:azimov.workspace@gmail.com">
+            <a className="underline" href="mailto:ashna@gmail.com">
               ashna@gmail.com
             </a>{" "}
             or through this form.
