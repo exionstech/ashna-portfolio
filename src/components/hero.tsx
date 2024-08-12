@@ -8,6 +8,7 @@ import { smoothScrollTo } from "@/common/lib/utils";
 import { useSectionInView } from "@/common/lib/hooks";
 
 import "@/styles/fonts.css";
+import WordFadeIn from "./magicui/word-fade-in";
 
 const Hero = () => {
   const { ref } = useSectionInView("home");
@@ -33,24 +34,28 @@ const Hero = () => {
       </video>
       <div className="container flex flex-col items-start justify-center tracking-wide text-black dark:text-white">
         <div className="container relative flex w-full h-screen flex-col items-center">
-          <div className="text-center text-[2rem] font-extrabold sm:w-[520px] md:w-[700px] lg:mb-5 lg:w-[920px] lg:text-[3rem] mt-32">
+          <div className="text-center text-[2rem] font-extrabold sm:w-[520px] md:w-[700px] lg:mb-5 lg:w-[920px] lg:text-[3rem] mt-24">
             <motion.span
               initial={{ y: -100, x: "-50%", opacity: 0 }}
               animate={{ y: 0, x: "-50%", opacity: 1 }}
-              className="mt-20 mb-10 text-start montserrat"
+              className="mt-6 text-start montserrat"
             >
               Hi!
             </motion.span>
             <br />
             <TextAnimation delay={1} baseText={`I'm Ashna`} />
-            <p className="montserrat text-4xl mt-10 mb-10">UX Designer | Artist | Baker</p>
-            <p className="montserrat text-3xl">
-              Unleashing creativity, crafting delightful experiences, and
-              leaving lasting impressions. Join me on this exciting journey!
+            <p className="montserrat text-lg md:text-4xl my-4 md:my-8">
+              UX Designer | Artist | Baker
+            </p>
+            <p className="montserrat text-lg md:text-3xl font-medium">
+              <WordFadeIn
+                words=" Unleashing creativity, crafting delightful experiences, and
+              leaving lasting impressions. Join me on this exciting journey!"
+              />
             </p>
           </div>
           <motion.div
-            className="w-92 flex flex-col items-center justify-center gap-3 px-4 mt-20 text-sm font-medium md:mt-12 md:flex-row lg:text-lg"
+            className="w-92 flex flex-col items-center justify-center gap-3 px-4 mt-8 text-sm font-medium md:mt-12 md:flex-row lg:text-lg"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -79,14 +84,14 @@ const Hero = () => {
             <div className="flex gap-2">
               <a
                 className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                href="https://www.linkedin.com/in/maksym-azimov/"
+                href="/"
                 target="_blank"
               >
                 <Linkedin />
               </a>
               <a
                 className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                href="https://github.com/bbyc4kes"
+                href="/"
                 target="_blank"
               >
                 <Github />
