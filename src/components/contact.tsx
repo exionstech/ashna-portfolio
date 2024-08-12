@@ -3,10 +3,11 @@ import "@/styles/fonts.css";
 import { useSectionInView } from "@/common/lib/hooks";
 import { motion } from "framer-motion";
 import SubmitBtn from "./submit-btn";
+import { Socials } from "./socials";
 
 const Contacts = () => {
   const { ref } = useSectionInView("contact");
-  
+
   return (
     <motion.section
       id="contact"
@@ -28,14 +29,14 @@ const Contacts = () => {
       <h1 className="gotu text-5xl font-semibold">Reach Out</h1>
       <div>
         <div className="w-[min(100%,38rem)] px-4 montserrat">
-          <p className="mb-20 mt-6 text-gray-700 dark:text-white/80">
+          <p className="mb-14 mt-6 text-gray-700 dark:text-white/80">
             Please contact me directly at{" "}
             <a className="underline" href="mailto:ashna@gmail.com">
               ashna@gmail.com
             </a>{" "}
             or through this form.
           </p>
-
+          <Socials />
           <form
             className="mt-10 flex flex-col dark:text-black"
           >
@@ -50,7 +51,7 @@ const Contacts = () => {
             <textarea
               className="my-3 h-52 resize-none rounded-lg border bg-gray-50 p-4 transition-all dark:bg-opacity-80 dark:outline-none dark:placeholder:text-darkBg dark:focus:bg-opacity-100"
               name="message"
-              placeholder="Your message 👋"
+              placeholder="Your message"
               required
               maxLength={5000}
             />
