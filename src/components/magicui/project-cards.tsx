@@ -1,10 +1,9 @@
-"use client";
 
 import { useRef } from "react";
 
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Link } from "react-router-dom";
+
 import { projectsData } from "@/constants/project-data";
 
 
@@ -34,7 +33,6 @@ export default function Project({
       }}
       className="group mb-3 last:mb-0 sm:mb-8"
     >
-      {/* <Link to={link} target="_blank"> */}
         <section
           className={
             "relative max-w-[52rem] overflow-hidden rounded-lg border transition hover:bg-gray-200 dark:hover:bg-darkOcean sm:h-[20rem]"
@@ -61,7 +59,6 @@ export default function Project({
             className="absolute -right-40 top-8 hidden w-[28.25rem] rounded-t-lg transition group-even:-left-40 group-even:right-[initial] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 sm:block"
           /> */}
         </section>
-      {/* </Link> */}
     </motion.div>
   );
 }
