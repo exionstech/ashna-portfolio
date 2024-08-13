@@ -32,7 +32,7 @@ export default function Project({
     >
       <section
         className={
-          "relative max-w-[52rem] overflow-hidden rounded-lg border transition hover:bg-gray-200 dark:hover:bg-darkOcean md:h-[20rem] "
+          "relative max-w-[52rem] overflow-hidden bg-[#ffcbb4]/60 rounded-lg border transition hover:bg-[#ffcbb4]/40 dark:hover:bg-darkOcean md:h-[20rem] "
         }
       >
         <div className="flex justify-center items-center">

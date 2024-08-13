@@ -36,7 +36,7 @@ export default function TextAnimation({
     <motion.span
       initial={{ y: -100, x: "-50%", opacity: 0 }}
       animate={{ y: 0, x: "-50%", opacity: 1 }}
-      className="mb-10 h-64 max-w-96 text-start text-[2rem] font-extrabold lg:text-[3rem]"
+      className="mb-10 h-64 max-w-96 text-start text-[2rem] font-extrabold lg:text-[3rem] gotu"
     >
       <motion.span>{displayText}</motion.span>
       {done && (
