@@ -5,9 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { projectsData } from "@/constants/project-data";
 import LearnMore from "@/components/learn-more";
 
-import { useMediaQuery } from "@uidotdev/usehooks";
-import { cn } from "@/lib/utils";
-
 type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
