@@ -1,3 +1,4 @@
+"use client";
 
 import { motion, Variants } from "framer-motion";
 
@@ -12,7 +13,7 @@ interface WordFadeInProps {
 
 export default function WordFadeIn({
   words,
-  delay = 0.15,
+  delay = 0.30,
   variants = {
     hidden: { opacity: 0 },
     visible: (i: any) => ({
@@ -31,7 +32,7 @@ export default function WordFadeIn({
       initial="hidden"
       animate="visible"
       className={cn(
-        "font-display text-center  tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:leading-[5rem] montserrat text-lg md:text-3xl font-medium",
+        "font-display text-center text-xl font-medium tracking-wider text-black drop-shadow-sm dark:text-white md:leading-8",
         className,
       )}
     >
