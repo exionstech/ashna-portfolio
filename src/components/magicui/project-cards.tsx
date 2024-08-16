@@ -36,11 +36,7 @@ export default function Project({
         }
       >
         <div className="flex justify-center items-center">
-          <img
-            src={imageUrl}
-            alt="Project I worked on"
-            className="md:hidden"
-          />
+          <img src={imageUrl} alt="Project I worked on" className="md:hidden" />
         </div>
         <div className="flex h-full flex-col px-5 pb-7 pt-4 md:max-w-[50%] md:pl-10 md:pr-2 md:pt-10 md:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold uppercase"> {title}</h3>

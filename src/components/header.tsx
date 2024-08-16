@@ -28,9 +28,21 @@ export default function Header() {
 
   const handleClick = (e: any, link: any) => {
     e.preventDefault();
-
-    if (link.id === "about") {
-      navigate("/about");
+    if (
+      link.id === "about" ||
+      link.id === "skills" ||
+      link.id === "experience"
+    ) {
+      if (location.pathname !== "/about") {
+        navigate("/about");
+        setTimeout(() => {
+          smoothScrollTo({ e, id: link.id });
+          setActiveSection(link.id);
+        }, 100);
+      } else {
+        smoothScrollTo({ e, id: link.id });
+        setActiveSection(link.id);
+      }
     } else {
       if (location.pathname !== "/") {
         navigate("/");
@@ -42,9 +54,9 @@ export default function Header() {
         smoothScrollTo({ e, id: link.id });
         setActiveSection(link.id);
       }
-
-      setTimeOfLastClick(Date.now());
     }
+
+    setTimeOfLastClick(Date.now());
   };
 
   return (
