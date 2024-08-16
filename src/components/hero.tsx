@@ -63,7 +63,7 @@ const Hero = () => {
             }}
           >
             <a
-              className="group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-black px-7 py-3 text-white outline-none transition hover:bg-[#fae0e0] hover:text-black hover:dark:text-black sm:w-auto"
+              className="group flex w-64  cursor-pointer items-center justify-center gap-2 rounded-full bg-black px-7 py-3 text-white outline-none transition hover:bg-[#fae0e0] hover:text-black hover:dark:text-black sm:w-auto duration-300"
               onClick={(e) => {
                 smoothScrollTo({ e, id: "contact" });
                 setActiveSection("contact");
@@ -74,7 +74,7 @@ const Hero = () => {
             </a>
 
             <a
-              className="borderBlack group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:w-auto"
+              className="borderBlack animate-buttonheartbeat group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:w-auto"
               href="/Ashna_Monga_Resume.pdf"
               download
             >
@@ -84,14 +84,14 @@ const Hero = () => {
             <div className="flex gap-2">
               <a
                 className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                href="https://www.linkedin.com/in/ashna-monga-5b037276/"
+                // href="https://www.linkedin.com/in/ashna-monga-5b037276/"
                 target="_blank"
               >
                 <Linkedin />
               </a>
               <a
                 className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                href="https://www.instagram.com/aashnakochhar/"
+                // href="https://www.instagram.com/aashnakochhar/"
                 target="_blank"
               >
                 <Instagram />

@@ -1,10 +1,51 @@
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { links } from "@/common/lib/data";
 import { smoothScrollTo } from "@/common/lib/utils";
 import { useActiveSectionContext } from "@/common/stores/active-section";
 import { motion } from "framer-motion";
+
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      const matchingLink = links.find((link) =>
+        location.hash.includes(link.id)
+      );
+      if (matchingLink) {
+        setActiveSection(matchingLink.id);
+      } else {
+        setActiveSection("home");
+      }
+    } else if (location.pathname === "/about") {
+      setActiveSection("about");
+    }
+  }, [location.pathname, location.hash, setActiveSection]);
+
+  const handleClick = (e: any, link: any) => {
+    e.preventDefault();
+
+    if (link.id === "about") {
+      navigate("/about");
+    } else {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          smoothScrollTo({ e, id: link.id });
+          setActiveSection(link.id);
+        }, 100);
+      } else {
+        smoothScrollTo({ e, id: link.id });
+        setActiveSection(link.id);
+      }
+
+      setTimeOfLastClick(Date.now());
+    }
+  };
 
   return (
     <header className="relative z-[99]">
@@ -25,12 +66,8 @@ export default function Header() {
             >
               <a
                 className="flex w-full items-center justify-center px-3 py-3 uppercase transition"
-                href={link.id}
-                onClick={(e) => {
-                  smoothScrollTo({ e, id: link.id });
-                  setActiveSection(link.id);
-                  setTimeOfLastClick(Date.now());
-                }}
+                href={link.id === "about" ? "/about" : `/#${link.id}`}
+                onClick={(e) => handleClick(e, link)}
               >
                 {link.name}
 

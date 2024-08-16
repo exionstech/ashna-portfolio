@@ -1,21 +1,16 @@
 
-import Header from "./components/header";
-import Hero from "./components/hero";
-import ActiveSectionContextProvider from "@/common/stores/active-section";
-
-import Contacts from "./components/contact";
-import Projects from "./components/projects";
+import { Route, Routes } from "react-router-dom";
+import { HomePgae } from "./pages/home";
+import { AboutPage } from "./pages/about";
 
 function App() {
   return (
-    <ActiveSectionContextProvider>
-      <Header />
-      <div className="flex flex-col">
-        <Hero />
-        <Projects />
-        <Contacts />
-      </div>
-    </ActiveSectionContextProvider>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePgae />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </>
   );
 }
 
