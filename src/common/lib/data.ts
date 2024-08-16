@@ -12,12 +12,12 @@ export const links = [
     id: "projects",
   },
   {
-    name: "Experience",
-    id: "experience",
-  },
-  {
     name: "Skills",
     id: "skills",
+  },
+  {
+    name: "Experience",
+    id: "experience",
   },
   {
     name: "Contact",

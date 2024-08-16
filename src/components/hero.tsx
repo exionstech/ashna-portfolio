@@ -51,6 +51,7 @@ const Hero = () => {
               <WordFadeIn
                 words=" Unleashing creativity, crafting delightful experiences, and
               leaving lasting impressions. Join me on this exciting journey!"
+              className="text-2xl font-semibold"
               />
             </p>
           </div>
